@@ -66,22 +66,22 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: './index.html',
       filename: 'index.html',
     }),
 
     new HtmlWebpackPlugin({
-      template: 'main.html',
+      template: './main.html',
       filename: 'main.html',
     }),
 
     new HtmlWebpackPlugin({
-      template: 'main2.html',
+      template: './main2.html',
       filename: 'main2.html',
     }),
 
     new HtmlWebpackPlugin({
-      template: 'form.html',
+      template: './form.html',
       filename: 'form.html',
     }),
   ],
