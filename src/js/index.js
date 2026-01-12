@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 
 // Sass
-import '../scss/main.scss';
+import'../scss/main.scss';
 import '../scss/main2.scss';
 
 // jQuery
