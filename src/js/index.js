@@ -1,13 +1,15 @@
 // Bootstrap + CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
-
+import '@popperjs/core'
+import '@fortawesome/fontawesome-free/js/all.js';
 // Sass
 import'../scss/main.scss';
 import '../scss/main2.scss';
 
 // jQuery
 import $ from 'jquery';
+
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
