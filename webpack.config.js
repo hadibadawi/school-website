@@ -34,7 +34,15 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[name][ext]'
+          filename: 'assets/imgas/[name][ext]'
+        }
+      },
+
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]' // سيتم وضع الخطوط في هذا المجلد
         }
       },
     ],
