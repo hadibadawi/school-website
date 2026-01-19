@@ -1,16 +1,11 @@
-// Bootstrap + CSS
+
+import * as bootstrap from 'bootstrap'; 
+window.bootstrap = bootstrap;
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap';
-import '@popperjs/core'
 import '@fortawesome/fontawesome-free/js/all.js';
-// Sass
-import'../scss/main.scss';
-import '../scss/main2.scss';
-
-// jQuery
+import '../scss/main.scss';
 import $ from 'jquery';
-
-
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 $(document).ready(function () {
@@ -42,3 +37,26 @@ function showRegister(e) {
 
 window.showLogin = showLogin;
 window.showRegister = showRegister;
+
+$(document).ready(function () {
+    
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#navbarNavDropdown',
+        offset: 110 // زيادة الـ Offset لضمان التفعيل عند وصول القسم للأعلى تماماً
+    });
+
+    // 2. تحديث الحالة فوراً عند النقر على الرابط
+    $('.navbar-nav .nav-link').on('click', function() {
+        // إزالة الكلاس من الجميع وإضافته للعنصر المضغوط
+        $('.navbar-nav .nav-link').removeClass('active');
+        $(this).addClass('active');
+
+        // إغلاق قائمة الموبايل تلقائياً بعد النقر (اختياري)
+        $('.navbar-collapse').collapse('hide');
+    });
+
+    // 3. كود إضافي: إصلاح مشكلة عدم تحديث الحالة في بعض الأحيان عند الـ Scroll اليدوي السريع
+    $(window).on('activate.bs.scrollspy', function () {
+        console.log('تم تغيير القسم النشط!');
+    });
+});

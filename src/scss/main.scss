@@ -9,23 +9,28 @@ body {
 }
 
 header {
-    background-color: $main-clor;
-
+    .navbar{
+      background-color: $main-clor;
+    }
     .navbar-nav {
-        padding-right: 0; // لإلغاء المسافة الافتراضية في وضع RTL
+        padding-right: 0; 
         list-style: none;
 
         .nav-link{
-        color:#fff !important;
-        font-size: 20px;
-        margin: 5px;
-
+          color:#fff !important;
+          font-size: 20px;
+          margin: 5px;
+          transition: all 0.5s ease;
 
         &:hover{
-            color: #fff;
-            background-color: $color-scendary;
-            border-radius: 10px;
-            
+            color:$color-scendary !important;
+        }
+
+        &.active {
+        color:$main-clor !important;
+        font-weight: bold;
+        background-color:$color-scendary;
+        border-radius: 5px;
         }
      }
     }
