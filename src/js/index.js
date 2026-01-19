@@ -1,11 +1,9 @@
-
 import * as bootstrap from 'bootstrap'; 
 window.bootstrap = bootstrap;
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/js/all.js';
 import '../scss/main.scss';
-import $ from 'jquery';
+import '@fortawesome/fontawesome-free/js/all.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 $(document).ready(function () {

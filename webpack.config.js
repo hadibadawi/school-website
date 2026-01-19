@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin"); 
@@ -84,6 +85,12 @@ module.exports = {
           to: "assets/imgas" 
         },
       ],
+    }),
+
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     }),
 
     new HtmlWebpackPlugin({ template: './index.html', filename: 'index.html', chunks:['index'] }),
